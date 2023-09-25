@@ -1,28 +1,28 @@
-# CodeAlpha Quiz App
+# 🧠 CodeAlpha Quiz App 📚
 
-Welcome to the CodeAlpha Quiz App! This is a web application that allows users to create, take, and manage quizzes on various topics.
+Welcome to the CodeAlpha Quiz App! This is a web application that allows users to create, take, and manage quizzes on various topics. 🚀
 
-## Table of Contents
+## 📋 Table of Contents
 
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [🚀 Features](#-features)
+- [🛠️ Getting Started](#%EF%B8%8F-getting-started)
+  - [⚙️ Prerequisites](#%EF%B8%8F-prerequisites)
+  - [🔧 Installation](#-installation)
+- [📝 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
 
-## Features
+## 🚀 Features
 
-- Create quizzes with multiple-choice questions.
-- Take quizzes and receive immediate feedback on your score.
-- View your quiz history and scores.
-- User authentication and registration.
-- Admin panel for quiz management (admin users only).
+- Create quizzes with multiple-choice questions. 📝
+- Take quizzes and receive immediate feedback on your score. ✅
+- View your quiz history and scores. 📊
+- User authentication and registration. 🔐
+- Admin panel for quiz management (admin users only). 🧑‍💼
 
-## Getting Started
+## 🛠️ Getting Started
 
-### Prerequisites
+### ⚙️ Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
@@ -30,10 +30,9 @@ Before you begin, ensure you have met the following requirements:
 - Django 3.2+
 - Git (optional for cloning the repository)
 
-### Installation
+### 🔧 Installation
 
 1. Clone the repository (if you haven't already):
 
    ```bash
    git clone https://github.com/tallirocklee/CodeAlpha_Quiz_App.git
-
