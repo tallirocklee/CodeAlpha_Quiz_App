@@ -1,0 +1,20 @@
+{% extends "quiz_app/base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">{{ quiz.title }}  &#x1F680 Results</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2>&#127881;Your Score:&#127881;</h2>
+                    <p>Your score: {{ score }}</p>
+                    <p>&#128073;Total Questions: {{ total_questions }}</p>
+                    <p>&#10004;&#65039;Correct Answers: {{ correct_answers }}</p>
+                    <p>&#10060;Incorrect Answers: {{ incorrect_answers }}</p>
+                    <p>&#8987;Percentage Correct: {{ percentage_correct }}%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

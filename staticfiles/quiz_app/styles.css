@@ -1,0 +1,59 @@
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Quiz page specific styles */
+fieldset {
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.choice {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Results page specific styles */
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+}

@@ -1,0 +1,17 @@
+{% extends "quiz_app/base.html" %}
+{% load static %} 
+
+{% block content %}
+<h1>Latest Quizzes
+</h1>
+<div class="card-container">
+    {% for quiz in quizzes %}
+        <div class="card">
+            <img src="{% static 'quiz_app/quiz_image.jpg' %}" alt="Quiz Image">
+            <h5 class="card-title">{{ quiz.title }}</h5>
+            <p class="card-text">Play quizzes and puzzles online to exercise your brain from anywhere, anytime for free across various categories</p>
+            <a href="{% url 'quiz' quiz.id %}" class="btn btn-primary">Take Quiz</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
