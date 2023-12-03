@@ -1,6 +1,6 @@
-# 🧠 CodeAlpha Quiz App 📚
+# 🧠 Quiz App 📚
 
-Welcome to the CodeAlpha Quiz App! This is a web application that allows users to create, take, and manage quizzes on various topics. 🚀
+Welcome to the Quiz App! This is a web application that allows users to create, take, and manage quizzes on various topics. 🚀
 
 ## 📋 Table of Contents
 
