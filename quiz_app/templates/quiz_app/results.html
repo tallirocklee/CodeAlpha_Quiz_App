@@ -1,17 +1,35 @@
 {% extends "quiz_app/base.html" %}
 {% block content %}
 <div class="container">
-    <h1 class="text-center">{{ quiz.title }}  &#x1F680 Results</h1>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="card">
+    <h1 class="text-center" style="font-size: 28px; color: var(--dl-color-custom-accent1); margin-bottom: 20px;">{{ quiz.title }} Results</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                 <div class="card-body">
-                    <h2>&#127881;Your Score:&#127881;</h2>
-                    <p>Your score: {{ score }}</p>
-                    <p>&#128073;Total Questions: {{ total_questions }}</p>
-                    <p>&#10004;&#65039;Correct Answers: {{ correct_answers }}</p>
-                    <p>&#10060;Incorrect Answers: {{ incorrect_answers }}</p>
-                    <p>&#8987;Percentage Correct: {{ percentage_correct }}%</p>
+                    <h2 class="text-center" style="font-size: 24px; color: black; margin-bottom: 20px;">&#127881; Your Score: &#127881;</h2>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">Your score: {{ score }}</p>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">Total Questions: {{ total_questions }}</p>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">&#10004; Correct Answers: {{ correct_answers }}</p>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">&#10060; Incorrect Answers: {{ incorrect_answers }}</p>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 0;">&#8987; Percentage Correct: {{ percentage_correct }}%</p>
+                    
+                    <!-- Detailed Results Section -->
+                    <div id="detailedResults" class="mt-4">
+                        <h3 class="text-center" style="font-size: 20px; color: var(--dl-color-custom-accent1);">Detailed Results</h3>
+                        <hr>
+                        {% for result in detailed_results %}
+                        <div class="question-result">
+                            <h4 style="font-size: 18px; margin-bottom: 5px; color: black;">{{ result.question_text }}</h4>
+                            {% if result.correct %}
+                                <p style="color: green;">Your answer ({{ result.user_answer }}) was correct!</p>
+                            {% elif result.user_answer == 'Not attempted' %}
+                                <p style="color: #999;">You did not attempt this question.</p>
+                            {% else %}
+                                <p style="color: red;">Your answer ({{ result.user_answer }}) was incorrect. Correct answer(s): {{ result.correct_answers_text|join:", " }}</p>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

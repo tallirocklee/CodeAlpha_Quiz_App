@@ -1,26 +1,43 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Quiz App{% endblock %}</title>
+    <title>{% block title %}Quizify{% endblock %}</title>
+    <!-- Add the provided font link tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Use the fonts for specific elements -->
+    <style>
+        .navbar-brand {
+            font-family: 'Jaro', sans-serif;
+            font-size: 30px !important; 
+        }
+        body, p, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
     <link rel="stylesheet" href="{% static 'quiz_app/styles.css' %}">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Quiz App</a>
+            <!-- Replace "Quiz App" with "Quizify" -->
+            <a class="navbar-brand" href="{% url 'home' %}">Quizify</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav"> <!-- Added flexbox classes -->
+                <ul class="navbar-nav">
+                    <!-- No home button -->
+                </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +49,6 @@
         {% endblock %}
     </main>
 
-   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@2.10.2/dist/umd/popper.min.js"></script>
 </body>

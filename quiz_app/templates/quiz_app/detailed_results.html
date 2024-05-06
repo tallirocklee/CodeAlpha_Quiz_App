@@ -1,0 +1,19 @@
+<!-- detailed_results.html -->
+{% extends "quiz_app/base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center" style="font-size: 28px; color: var(--dl-color-custom-accent1); margin-bottom: 20px;">Detailed Analysis</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div class="card-body">
+                    <h2 class="text-center" style="font-size: 24px; color: black; margin-bottom: 20px;">Question 1</h2>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">Correct Answer: Option A</p>
+                    <p class="text-center" style="font-size: 20px; color: black; margin-bottom: 10px;">Your Answer: Option B</p>
+                    <!-- Add more detailed analysis for each question -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

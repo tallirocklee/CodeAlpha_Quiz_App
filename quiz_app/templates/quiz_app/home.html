@@ -1,17 +1,23 @@
 {% extends "quiz_app/base.html" %}
-{% load static %} 
+{% load static %}
 
 {% block content %}
-<h1>Latest Quizzes
-</h1>
+<h1>Latest Quizzes</h1>
 <div class="card-container">
     {% for quiz in quizzes %}
         <div class="card">
-            <img src="{% static 'quiz_app/quiz_image.jpg' %}" alt="Quiz Image">
+            {% if quiz.image %}
+                <img src="{{ quiz.image.url }}" alt="{{ quiz.title }}">
+            {% else %}
+                <p>No image available</p>
+            {% endif %}
             <h5 class="card-title">{{ quiz.title }}</h5>
             <p class="card-text">Play quizzes and puzzles online to exercise your brain from anywhere, anytime for free across various categories</p>
-            <a href="{% url 'quiz' quiz.id %}" class="btn btn-primary">Take Quiz</a>
+            <a href="{% url 'quiz' quiz.id %}" style="background-color: #F0ECE5; color: #161A30; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Take Quiz</a>
         </div>
     {% endfor %}
+    <div>
+        <a href="{% url 'signup' %}">Sign up</a>
+    </div>
 </div>
 {% endblock %}
